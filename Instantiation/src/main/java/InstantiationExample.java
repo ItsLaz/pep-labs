@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class InstantiationExample {
     /**
@@ -18,6 +19,7 @@ public class InstantiationExample {
      * @return any object.
      */
     public Object instantiateANewObject(){
-        return null;
+        Scanner sc = new Scanner(System.in);
+        return sc;
     }
 }
