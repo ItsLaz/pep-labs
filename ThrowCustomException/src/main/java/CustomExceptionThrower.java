@@ -1,3 +1,5 @@
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 
 public class CustomExceptionThrower {
 
@@ -7,9 +9,15 @@ public class CustomExceptionThrower {
      * exceptions could provide valuable information for when something goes wrong in the application.
      *
      * I recommend looking at the test case for a good example of try/catch block usage, as well.
+     * @throws CustomException
      */
-    public void throwCustomException(){
-
+    public void throwCustomException() throws CustomException{
+        FileInputStream fis = null;
+        try {
+            fis = new FileInputStream("B:/myfile.txt");
+        } catch (FileNotFoundException e) {
+            throw new CustomException();
+        }
     }
 
 }
