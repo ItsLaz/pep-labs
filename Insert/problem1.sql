@@ -1,0 +1,1 @@
+INSERT INTO song (title, artist) VALUES ('Hail to the Kind', 'Avenged Sevenfold')
